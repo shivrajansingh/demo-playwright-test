@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.playwrighttests.tests.YoutubeTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 61.40 s -- in com.playwrighttests.tests.YoutubeTest
