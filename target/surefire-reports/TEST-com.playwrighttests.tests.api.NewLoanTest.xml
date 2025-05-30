@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.playwrighttests.tests.api.NewLoanTest" time="2.083" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/nix/Documents/playwright-test/target/test-classes:/home/nix/Documents/playwright-test/target/classes:/home/nix/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/home/nix/.m2/repository/org/slf4j/slf4j-simple/2.0.7/slf4j-simple-2.0.7.jar:/home/nix/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar:/home/nix/.m2/repository/com/microsoft/playwright/playwright/1.43.0/playwright-1.43.0.jar:/home/nix/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/nix/.m2/repository/com/microsoft/playwright/driver/1.43.0/driver-1.43.0.jar:/home/nix/.m2/repository/com/microsoft/playwright/driver-bundle/1.43.0/driver-bundle-1.43.0.jar:/home/nix/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/home/nix/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/nix/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-suite/1.10.1/junit-platform-suite-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.1/junit-platform-suite-api-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.10.1/junit-platform-suite-engine-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.1/junit-platform-suite-commons-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.1/junit-platform-launcher-1.10.1.jar:/home/nix/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar:/home/nix/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.6/rxjava-3.1.6.jar:/home/nix/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/home/nix/.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar:/home/nix/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/nix/Documents/playwright-test/target/surefire/surefirebooter-20250530180908045_3.jar /home/nix/Documents/playwright-test/target/surefire 2025-05-30T18-09-07_921-jvmRun1 surefire-20250530180908045_1tmp surefire_0-20250530180908045_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="ApiTestSuite"/>
+    <property name="surefire.test.class.path" value="/home/nix/Documents/playwright-test/target/test-classes:/home/nix/Documents/playwright-test/target/classes:/home/nix/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/home/nix/.m2/repository/org/slf4j/slf4j-simple/2.0.7/slf4j-simple-2.0.7.jar:/home/nix/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar:/home/nix/.m2/repository/com/microsoft/playwright/playwright/1.43.0/playwright-1.43.0.jar:/home/nix/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/nix/.m2/repository/com/microsoft/playwright/driver/1.43.0/driver-1.43.0.jar:/home/nix/.m2/repository/com/microsoft/playwright/driver-bundle/1.43.0/driver-bundle-1.43.0.jar:/home/nix/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/home/nix/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/nix/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-suite/1.10.1/junit-platform-suite-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.1/junit-platform-suite-api-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.10.1/junit-platform-suite-engine-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.1/junit-platform-suite-commons-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.1/junit-platform-launcher-1.10.1.jar:/home/nix/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar:/home/nix/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.6/rxjava-3.1.6.jar:/home/nix/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/home/nix/.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar:/home/nix/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/nix"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/nix/Documents/playwright-test"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/home/nix/Documents/playwright-test/target/surefire/surefirebooter-20250530180908045_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.15+6-Ubuntu-0ubuntu124.04"/>
+    <property name="user.name" value="nix"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.11.0-26-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/nix/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-17"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="17.0.15"/>
+    <property name="user.dir" value="/home/nix/Documents/playwright-test"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="17.0.15+6-Ubuntu-0ubuntu124.04"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testCreateLoan" classname="com.playwrighttests.tests.api.NewLoanTest" time="2.063">
+    <system-err><![CDATA[[main] INFO com.playwrighttests.tests.api.BaseApiTest - === API Test Global Setup Started ===
+[main] INFO com.playwrighttests.tests.api.BaseApiTest - === API Test Global Setup Completed ===
+[main] INFO com.playwrighttests.tests.api.BaseApiTest - === API Test Setup Started: test-002-api-create-loan ===
+[main] INFO com.playwrighttests.utils.ApiClient - API client initialized with base URL: https://0b93d062-55ba-4f24-9ea8-c409e94c7fc3.mock.pstmn.io
+[main] INFO com.playwrighttests.tests.api.BaseApiTest - === API Test Setup Completed: test-002-api-create-loan ===
+[main] INFO com.playwrighttests.utils.Service - POST request to: /cart/transactions/newloan
+[main] INFO com.playwrighttests.utils.ApiClient - Sending POST request to: /cart/transactions/newloan
+[main] INFO com.playwrighttests.utils.ApiClient - Response status: 200 OK
+[main] INFO com.playwrighttests.utils.ApiClient - Response body (truncated): {
+    "success": true,
+    "messages": [
+        "Transaction(s) has been committed successfully"
+    ],
+    "payload": {
+        "clientTransactionId": null,
+        "totalAmount": -800,
+        "currency": "USD",
+        "transactionEmail": "Varsha.Anand@ezcorp.com",
+        "customer": {
+            "customerEzId": "0067125483",
+            "email": "qa123+susangreen@lana.com",
+            "firstName": "SUSAN",
+            "lastName": "GREEN",
+            "phone": "(662)492-1233",
+            "customerType": "Individual",
+            "address": {
+                "addressLine1": "123 Street Name",
+                "addressLine2": null,
+                "city": "austin",
+                "addressState": "TX",
+                "country": "USA",
+                "postalCode": "73000",
+                "streetName": "Street Name",
+                "streetNo": null,
+                "aptSuite": null,
+                "stateCode": null,
+                "countryCode": null,
+                "addressS...
+[main] INFO com.playwrighttests.tests.api.NewLoanTest - {
+    "success": true,
+    "messages": [
+        "Transaction(s) has been committed successfully"
+    ],
+    "payload": {
+        "clientTransactionId": null,
+        "totalAmount": -800,
+        "currency": "USD",
+        "transactionEmail": "Varsha.Anand@ezcorp.com",
+        "customer": {
+            "customerEzId": "0067125483",
+            "email": "qa123+susangreen@lana.com",
+            "firstName": "SUSAN",
+            "lastName": "GREEN",
+            "phone": "(662)492-1233",
+            "customerType": "Individual",
+            "address": {
+                "addressLine1": "123 Street Name",
+                "addressLine2": null,
+                "city": "austin",
+                "addressState": "TX",
+                "country": "USA",
+                "postalCode": "73000",
+                "streetName": "Street Name",
+                "streetNo": null,
+                "aptSuite": null,
+                "stateCode": null,
+                "countryCode": null,
+                "addressStateDisplayText": "TX - Texas",
+                "zoneDisplayText": null,
+                "block": null,
+                "zone": null
+            },
+            "identifications": [
+                {
+                    "type": "DL/P - US Drivers License with Picture",
+                    "value": "117645233",
+                    "isLastID": true
+                }
+            ],
+            "middleName": "EZPLUS",
+            "locationEzId": "01112",
+            "rfc": "01234567",
+            "dateOfBirth": "1970-01-01",
+            "employer": {
+                "commercialActivity": null,
+                "commercialActivityDisplayText": null,
+                "state": null,
+                "city": null,
+                "streetName": null,
+                "streetNumber": null
+            },
+            "media": []
+        },
+        "cartContext": {
+            "ipAddress": "10.251.21.45",
+            "locationEzId": "01112",
+            "employeeEzId": "131313180",
+            "cashDrawer": null,
+            "cartEzId": "CTWOA-3MQB2",
+            "location": {
+                "ezId": "01112",
+                "name": "EZPAWN #10911",
+                "addressLine1": "103 N. Lutterloh",
+                "addressLine2": "",
+                "city": "Gatesville",
+                "stateName": "TX - Texas",
+                "zipCode": "76528",
+                "countryName": "USA",
+                "phoneNumber": "(254)865-9198",
+                "openTime": "09:00",
+                "closeTime": "18:00",
+                "stateAlternateText": "TX",
+                "stateAlternateTextMX": "TX",
+                "storeHours": [
+                    {
+                        "dayOfWeek": "Saturday",
+                        "openTime": "09:00",
+                        "closeTime": "18:00"
+                    },
+                    {
+                        "dayOfWeek": "Monday through Friday",
+                        "openTime": "09:00",
+                        "closeTime": "18:00"
+                    },
+                    {
+                        "dayOfWeek": "Sunday",
+                        "openTime": "00:00",
+                        "closeTime": "00:01"
+                    }
+                ],
+                "receiptLocationName": "EZPAWN",
+                "streetName": "N. Lutterloh",
+                "streetNumber": "103",
+                "timezoneAlternateText": "CST",
+                "daylightSavingsTimeDisplayText": "1 Hour",
+                "locale": "US",
+                "countryCode": 128001
+            },
+            "transactionDttm": "2025-02-12T09:05:00+0000",
+            "transactionDttmLocation": "2025-02-12T03:05:00-0600",
+            "applicationName": "EZSYSTEMMS",
+            "transactionCustomer": null,
+            "manualOverride": {
+                "transactionDttm": "2025-02-12T09:05:00-0000",
+                "reasonCode": "TRANSACTION_FAILURE",
+                "manualImportEmployeeEzId": "131313149"
+            }
+        },
+        "transactions": [
+            {
+                "transactionType": "loan",
+                "transactionDetails": {
+                    "amount": -800,
+                    "rewardCredit": null,
+                    "firearmDetails": null,
+                    "amlDataCaptured": null,
+                    "transactionDate": null,
+                    "loan": {
+                        "ezId": "0098219",
+                        "customerEzId": "0067125483",
+                        "loanAmount": 800,
+                        "loanDate": "2025-05-29T00:00:00-0500",
+                        "dueDate": "2025-06-29",
+                        "finalDueDate": "2025-07-29",
+                        "paymentOptions": {
+                            "dailyExtension": {
+                                "amountRounded": 4,
+                                "amountUnrounded": 4,
+                                "taxAmount": 0,
+                                "amountBeforeTax": 4,
+                                "maxExtensionDays": 29
+                            },
+                            "multiDayExtensions": [
+                                {
+                                    "dueDate": "2025-08-28",
+                                    "amount": 120,
+                                    "taxAmount": 0,
+                                    "amountBeforeTax": 120,
+                                    "type": "monthly",
+                                    "typeValue": 30
+                                }
+                            ],
+                            "redemptions": {
+                                "amount": 920,
+                                "lostTicketFee": 1
+                            },
+                            "renewals": {
+                                "amount": 120,
+                                "lostTicketFee": 1
+                            },
+                            "paydowns": null
+                        },
+                        "financeDetails": {
+                            "financeCharge": 120,
+                            "apr": null,
+                            "newMaturityDate": "2025-06-29",
+                            "amountDueAtMaturityDate": "920.00",
+                            "dailyFinanceCharge": 4
+                        },
+                        "currency": null,
+                        "location": {
+                            "ezId": "01112",
+                            "name": "EZPAWN #10911",
+                            "addressLine1": "103 N. Lutterloh",
+                            "city": "Gatesville",
+                            "stateName": "TX - Texas",
+                            "zipCode": "76528",
+                            "countryName": "USA",
+                            "phoneNumber": "(254)865-9198",
+                            "openTime": "09:00",
+                            "closeTime": "18:00",
+                            "stateAlternateText": "TX",
+                            "storeHours": [
+                                {
+                                    "dayOfWeek": "Monday through Friday",
+                                    "openTime": "09:00",
+                                    "closeTime": "18:00"
+                                },
+                                {
+                                    "dayOfWeek": "Saturday",
+                                    "openTime": "09:00",
+                                    "closeTime": "18:00"
+                                },
+                                {
+                                    "dayOfWeek": "Sunday",
+                                    "openTime": "00:00",
+                                    "closeTime": "00:01"
+                                }
+                            ],
+                            "receiptLocationName": "EZPAWN",
+                            "streetName": "N. Lutterloh",
+                            "streetNumber": "103",
+                            "timezoneAlternateText": "CST",
+                            "daylightSavingsTimeDisplayText": "1 Hour",
+                            "locale": "US",
+                            "countryCode": 128001
+                        },
+                        "items": [
+                            {
+                                "ezId": "011120512228",
+                                "type": "MJ",
+                                "category": 724012,
+                                "itemStatus": "LN",
+                                "salesPrice": 600.99,
+                                "retailPrice": 1015.98,
+                                "cost": 800,
+                                "description": "Ring Ladies",
+                                "ownerAppliedMark": null,
+                                "locationEzId": "01112",
+                                "itemLocation": null,
+                                "itemLocationName": "01112",
+                                "itemGrade": "B",
+                                "origin": "LOAN",
+                                "originalTransId": "0098219",
+                                "loanAppraisalDetails": {
+                                    "originalOptimal": 225,
+                                    "originalHigh": 276,
+                                    "originalLow": 150,
+                                    "originalEzSalesPrice": 500.99
+                                },
+                                "purchaseAppraisalDetails": null,
+                                "optimalAppraisal": 270,
+                                "highAppraisal": 331,
+                                "lowAppraisal": 180,
+                                "itemReqId": "5764d9b2-ff48-4f6e-ac7d-bc01b1340570",
+                                "gsmUid": null,
+                                "reasonCode": null,
+                                "transactionEzId": "000889173767",
+                                "storeAcquisition": "2025-05-29T10:40:11.983Z",
+                                "companyAcquisition": "2025-05-29T10:40:11.983Z",
+                                "shelfDate": "2025-05-29T10:40:11.983Z",
+                                "itemLocationId": 125128,
+                                "originalItem": null,
+                                "features": [
+                                    {
+                                        "type": "SL",
+                                        "name": "COLOR",
+                                        "value": "Black"
+                                    },
+                                    {
+                                        "type": "SL",
+                                        "name": "SCRAP",
+                                        "value": "YES"
+                                    }
+                                ],
+                                "quantity": null,
+                                "adjItemCost": null,
+                                "weightInGrams": 11,
+                                "scrap": false,
+                                "length": null,
+                                "stones": [
+                                    {
+                                        "color": "WHITE",
+                                        "quality": "MEDIUM",
+                                        "shape": "ROUND",
+                                        "count": 2,
+                                        "size": 20,
+                                        "weight": 10,
+                                        "diamondLow": null,
+                                        "diamondHigh": null,
+                                        "diamondActual": null
+                                    }
+                                ],
+                                "material": {
+                                    "type": "GOLD",
+                                    "quality": "8K_(.333)",
+                                    "color": "ROSE_GOLD"
+                                },
+                                "categoryName": "Religious Pendant",
+                                "rootCategoryParent": {
+                                    "categoryId": 500002,
+                                    "categoryName": "Jewelry"
+                                },
+                                "jewelryGender": "Not Applicable",
+                                "jewelryStyle": "Other",
+                                "jewelryType": "Pendant/Charm",
+                                "media": null,
+                                "dotValue": null
+                            }
+                        ],
+                        "loanEzId": null,
+                        "loanLocationEzId": "01112",
+                        "financeChargePaidThrough": "2025-05-29",
+                        "totalFinanceChargePaid": 0,
+                        "pendingTransaction": null,
+                        "apr": 1.8,
+                        "hasJewelry": "F",
+                        "ruleGroup": 211283,
+                        "interestCharge": 120,
+                        "storageCharge": 0,
+                        "setUpRateChange": null,
+                        "setUpFee": 0,
+                        "policeCharge": null,
+                        "firearmHandlingCharge": null,
+                        "setUpRate": 0,
+                        "additionalCharge": 0,
+                        "hasPartialPayment": false,
+                        "partialPaymentTempRate": 0,
+                        "loanTerm": null,
+                        "dailyInterestCharge": 4,
+                        "firstLoanEzId": null,
+                        "loanRuleId": null,
+                        "loanReqId": "c27c9cea-f51d-4bae-86f2-771788dfade8",
+                        "customerImages": "cImafagagashgsagag",
+                        "signature": "testSign",
+                        "approvalCode": null,
+                        "customerScore": "-1.909",
+                        "customerMDMCategory": [
+                            {
+                                "categoryName": "Overall",
+                                "parentCategoryName": "8764",
+                                "pickupRate": "96.197174"
+                            }
+                        ],
+                        "media": null,
+                        "oneDayLoan": false,
+                        "interestRate": 15,
+                        "interestRate1": 0,
+                        "interestRate2": 0,
+                        "annualServiceStorageRate": 0,
+                        "interestChargeWTax": 129.9,
+                        "storageChargeWTax": -9.9,
+                        "administrativeRate": null,
+                        "administrativeCharge": null,
+                        "monthlyServiceStorageRateHigh": 1,
+                        "administrativeChargeRateHigh": 1,
+                        "customerSbtVerified": true,
+                        "customerOptInForLoanReminders": true,
+                        "isMemberOfTheArmedForces": true,
+                        "isDependentOfTheArmedForces": true,
+                        "dropDays": 30,
+                        "cne": null,
+                        "lpp": null,
+                        "loanLostTicketFee": null
+                    }
+                }
+            }
+        ],
+        "tenderIn": [],
+        "tenderOut": [
+            {
+                "tenderType": "CS",
+                "tenderAmount": 800
+            }
+        ]
+    }
+}
+[main] INFO com.playwrighttests.tests.api.NewLoanTest - Response text: {
+    "success": true,
+    "messages": [
+        "Transaction(s) has been committed successfully"
+    ],
+    "payload": {
+        "clientTransactionId": null,
+        "totalAmount": -800,
+        "currency": "USD",
+        "transactionEmail": "Varsha.Anand@ezcorp.com",
+        "customer": {
+            "customerEzId": "0067125483",
+            "email": "qa123+susangreen@lana.com",
+            "firstName": "SUSAN",
+            "lastName": "GREEN",
+            "phone": "(662)492-1233",
+            "customerType": "Individual",
+            "address": {
+                "addressLine1": "123 Street Name",
+                "addressLine2": null,
+                "city": "austin",
+                "addressState": "TX",
+                "country": "USA",
+                "postalCode": "73000",
+                "streetName": "Street Name",
+                "streetNo": null,
+                "aptSuite": null,
+                "stateCode": null,
+                "countryCode": null,
+                "addressStateDisplayText": "TX - Texas",
+                "zoneDisplayText": null,
+                "block": null,
+                "zone": null
+            },
+            "identifications": [
+                {
+                    "type": "DL/P - US Drivers License with Picture",
+                    "value": "117645233",
+                    "isLastID": true
+                }
+            ],
+            "middleName": "EZPLUS",
+            "locationEzId": "01112",
+            "rfc": "01234567",
+            "dateOfBirth": "1970-01-01",
+            "employer": {
+                "commercialActivity": null,
+                "commercialActivityDisplayText": null,
+                "state": null,
+                "city": null,
+                "streetName": null,
+                "streetNumber": null
+            },
+            "media": []
+        },
+        "cartContext": {
+            "ipAddress": "10.251.21.45",
+            "locationEzId": "01112",
+            "employeeEzId": "131313180",
+            "cashDrawer": null,
+            "cartEzId": "CTWOA-3MQB2",
+            "location": {
+                "ezId": "01112",
+                "name": "EZPAWN #10911",
+                "addressLine1": "103 N. Lutterloh",
+                "addressLine2": "",
+                "city": "Gatesville",
+                "stateName": "TX - Texas",
+                "zipCode": "76528",
+                "countryName": "USA",
+                "phoneNumber": "(254)865-9198",
+                "openTime": "09:00",
+                "closeTime": "18:00",
+                "stateAlternateText": "TX",
+                "stateAlternateTextMX": "TX",
+                "storeHours": [
+                    {
+                        "dayOfWeek": "Saturday",
+                        "openTime": "09:00",
+                        "closeTime": "18:00"
+                    },
+                    {
+                        "dayOfWeek": "Monday through Friday",
+                        "openTime": "09:00",
+                        "closeTime": "18:00"
+                    },
+                    {
+                        "dayOfWeek": "Sunday",
+                        "openTime": "00:00",
+                        "closeTime": "00:01"
+                    }
+                ],
+                "receiptLocationName": "EZPAWN",
+                "streetName": "N. Lutterloh",
+                "streetNumber": "103",
+                "timezoneAlternateText": "CST",
+                "daylightSavingsTimeDisplayText": "1 Hour",
+                "locale": "US",
+                "countryCode": 128001
+            },
+            "transactionDttm": "2025-02-12T09:05:00+0000",
+            "transactionDttmLocation": "2025-02-12T03:05:00-0600",
+            "applicationName": "EZSYSTEMMS",
+            "transactionCustomer": null,
+            "manualOverride": {
+                "transactionDttm": "2025-02-12T09:05:00-0000",
+                "reasonCode": "TRANSACTION_FAILURE",
+                "manualImportEmployeeEzId": "131313149"
+            }
+        },
+        "transactions": [
+            {
+                "transactionType": "loan",
+                "transactionDetails": {
+                    "amount": -800,
+                    "rewardCredit": null,
+                    "firearmDetails": null,
+                    "amlDataCaptured": null,
+                    "transactionDate": null,
+                    "loan": {
+                        "ezId": "0098219",
+                        "customerEzId": "0067125483",
+                        "loanAmount": 800,
+                        "loanDate": "2025-05-29T00:00:00-0500",
+                        "dueDate": "2025-06-29",
+                        "finalDueDate": "2025-07-29",
+                        "paymentOptions": {
+                            "dailyExtension": {
+                                "amountRounded": 4,
+                                "amountUnrounded": 4,
+                                "taxAmount": 0,
+                                "amountBeforeTax": 4,
+                                "maxExtensionDays": 29
+                            },
+                            "multiDayExtensions": [
+                                {
+                                    "dueDate": "2025-08-28",
+                                    "amount": 120,
+                                    "taxAmount": 0,
+                                    "amountBeforeTax": 120,
+                                    "type": "monthly",
+                                    "typeValue": 30
+                                }
+                            ],
+                            "redemptions": {
+                                "amount": 920,
+                                "lostTicketFee": 1
+                            },
+                            "renewals": {
+                                "amount": 120,
+                                "lostTicketFee": 1
+                            },
+                            "paydowns": null
+                        },
+                        "financeDetails": {
+                            "financeCharge": 120,
+                            "apr": null,
+                            "newMaturityDate": "2025-06-29",
+                            "amountDueAtMaturityDate": "920.00",
+                            "dailyFinanceCharge": 4
+                        },
+                        "currency": null,
+                        "location": {
+                            "ezId": "01112",
+                            "name": "EZPAWN #10911",
+                            "addressLine1": "103 N. Lutterloh",
+                            "city": "Gatesville",
+                            "stateName": "TX - Texas",
+                            "zipCode": "76528",
+                            "countryName": "USA",
+                            "phoneNumber": "(254)865-9198",
+                            "openTime": "09:00",
+                            "closeTime": "18:00",
+                            "stateAlternateText": "TX",
+                            "storeHours": [
+                                {
+                                    "dayOfWeek": "Monday through Friday",
+                                    "openTime": "09:00",
+                                    "closeTime": "18:00"
+                                },
+                                {
+                                    "dayOfWeek": "Saturday",
+                                    "openTime": "09:00",
+                                    "closeTime": "18:00"
+                                },
+                                {
+                                    "dayOfWeek": "Sunday",
+                                    "openTime": "00:00",
+                                    "closeTime": "00:01"
+                                }
+                            ],
+                            "receiptLocationName": "EZPAWN",
+                            "streetName": "N. Lutterloh",
+                            "streetNumber": "103",
+                            "timezoneAlternateText": "CST",
+                            "daylightSavingsTimeDisplayText": "1 Hour",
+                            "locale": "US",
+                            "countryCode": 128001
+                        },
+                        "items": [
+                            {
+                                "ezId": "011120512228",
+                                "type": "MJ",
+                                "category": 724012,
+                                "itemStatus": "LN",
+                                "salesPrice": 600.99,
+                                "retailPrice": 1015.98,
+                                "cost": 800,
+                                "description": "Ring Ladies",
+                                "ownerAppliedMark": null,
+                                "locationEzId": "01112",
+                                "itemLocation": null,
+                                "itemLocationName": "01112",
+                                "itemGrade": "B",
+                                "origin": "LOAN",
+                                "originalTransId": "0098219",
+                                "loanAppraisalDetails": {
+                                    "originalOptimal": 225,
+                                    "originalHigh": 276,
+                                    "originalLow": 150,
+                                    "originalEzSalesPrice": 500.99
+                                },
+                                "purchaseAppraisalDetails": null,
+                                "optimalAppraisal": 270,
+                                "highAppraisal": 331,
+                                "lowAppraisal": 180,
+                                "itemReqId": "5764d9b2-ff48-4f6e-ac7d-bc01b1340570",
+                                "gsmUid": null,
+                                "reasonCode": null,
+                                "transactionEzId": "000889173767",
+                                "storeAcquisition": "2025-05-29T10:40:11.983Z",
+                                "companyAcquisition": "2025-05-29T10:40:11.983Z",
+                                "shelfDate": "2025-05-29T10:40:11.983Z",
+                                "itemLocationId": 125128,
+                                "originalItem": null,
+                                "features": [
+                                    {
+                                        "type": "SL",
+                                        "name": "COLOR",
+                                        "value": "Black"
+                                    },
+                                    {
+                                        "type": "SL",
+                                        "name": "SCRAP",
+                                        "value": "YES"
+                                    }
+                                ],
+                                "quantity": null,
+                                "adjItemCost": null,
+                                "weightInGrams": 11,
+                                "scrap": false,
+                                "length": null,
+                                "stones": [
+                                    {
+                                        "color": "WHITE",
+                                        "quality": "MEDIUM",
+                                        "shape": "ROUND",
+                                        "count": 2,
+                                        "size": 20,
+                                        "weight": 10,
+                                        "diamondLow": null,
+                                        "diamondHigh": null,
+                                        "diamondActual": null
+                                    }
+                                ],
+                                "material": {
+                                    "type": "GOLD",
+                                    "quality": "8K_(.333)",
+                                    "color": "ROSE_GOLD"
+                                },
+                                "categoryName": "Religious Pendant",
+                                "rootCategoryParent": {
+                                    "categoryId": 500002,
+                                    "categoryName": "Jewelry"
+                                },
+                                "jewelryGender": "Not Applicable",
+                                "jewelryStyle": "Other",
+                                "jewelryType": "Pendant/Charm",
+                                "media": null,
+                                "dotValue": null
+                            }
+                        ],
+                        "loanEzId": null,
+                        "loanLocationEzId": "01112",
+                        "financeChargePaidThrough": "2025-05-29",
+                        "totalFinanceChargePaid": 0,
+                        "pendingTransaction": null,
+                        "apr": 1.8,
+                        "hasJewelry": "F",
+                        "ruleGroup": 211283,
+                        "interestCharge": 120,
+                        "storageCharge": 0,
+                        "setUpRateChange": null,
+                        "setUpFee": 0,
+                        "policeCharge": null,
+                        "firearmHandlingCharge": null,
+                        "setUpRate": 0,
+                        "additionalCharge": 0,
+                        "hasPartialPayment": false,
+                        "partialPaymentTempRate": 0,
+                        "loanTerm": null,
+                        "dailyInterestCharge": 4,
+                        "firstLoanEzId": null,
+                        "loanRuleId": null,
+                        "loanReqId": "c27c9cea-f51d-4bae-86f2-771788dfade8",
+                        "customerImages": "cImafagagashgsagag",
+                        "signature": "testSign",
+                        "approvalCode": null,
+                        "customerScore": "-1.909",
+                        "customerMDMCategory": [
+                            {
+                                "categoryName": "Overall",
+                                "parentCategoryName": "8764",
+                                "pickupRate": "96.197174"
+                            }
+                        ],
+                        "media": null,
+                        "oneDayLoan": false,
+                        "interestRate": 15,
+                        "interestRate1": 0,
+                        "interestRate2": 0,
+                        "annualServiceStorageRate": 0,
+                        "interestChargeWTax": 129.9,
+                        "storageChargeWTax": -9.9,
+                        "administrativeRate": null,
+                        "administrativeCharge": null,
+                        "monthlyServiceStorageRateHigh": 1,
+                        "administrativeChargeRateHigh": 1,
+                        "customerSbtVerified": true,
+                        "customerOptInForLoanReminders": true,
+                        "isMemberOfTheArmedForces": true,
+                        "isDependentOfTheArmedForces": true,
+                        "dropDays": 30,
+                        "cne": null,
+                        "lpp": null,
+                        "loanLostTicketFee": null
+                    }
+                }
+            }
+        ],
+        "tenderIn": [],
+        "tenderOut": [
+            {
+                "tenderType": "CS",
+                "tenderAmount": 800
+            }
+        ]
+    }
+}
+[main] INFO com.playwrighttests.tests.api.BaseApiTest - === API Test Teardown Started: test-002-api-create-loan ===
+[main] INFO com.playwrighttests.tests.api.BaseApiTest - === API Test Teardown Completed: test-002-api-create-loan ===
+]]></system-err>
+  </testcase>
+</testsuite>

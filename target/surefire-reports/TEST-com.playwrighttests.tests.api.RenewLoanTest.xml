@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.playwrighttests.tests.api.RenewLoanTest" time="3.706" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/nix/Documents/playwright-test/target/test-classes:/home/nix/Documents/playwright-test/target/classes:/home/nix/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/home/nix/.m2/repository/org/slf4j/slf4j-simple/2.0.7/slf4j-simple-2.0.7.jar:/home/nix/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar:/home/nix/.m2/repository/com/microsoft/playwright/playwright/1.43.0/playwright-1.43.0.jar:/home/nix/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/home/nix/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/nix/.m2/repository/com/microsoft/playwright/driver/1.43.0/driver-1.43.0.jar:/home/nix/.m2/repository/com/microsoft/playwright/driver-bundle/1.43.0/driver-bundle-1.43.0.jar:/home/nix/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/home/nix/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/nix/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-suite/1.10.1/junit-platform-suite-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.1/junit-platform-suite-api-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.10.1/junit-platform-suite-engine-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.1/junit-platform-suite-commons-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.1/junit-platform-launcher-1.10.1.jar:/home/nix/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar:/home/nix/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.6/rxjava-3.1.6.jar:/home/nix/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/home/nix/.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar:/home/nix/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/home/nix/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/home/nix/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/nix/Documents/playwright-test/target/surefire/surefirebooter-20250530230209586_3.jar /home/nix/Documents/playwright-test/target/surefire 2025-05-30T23-02-09_488-jvmRun1 surefire-20250530230209586_1tmp surefire_0-20250530230209586_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="RenewLoanTest"/>
+    <property name="surefire.test.class.path" value="/home/nix/Documents/playwright-test/target/test-classes:/home/nix/Documents/playwright-test/target/classes:/home/nix/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/home/nix/.m2/repository/org/slf4j/slf4j-simple/2.0.7/slf4j-simple-2.0.7.jar:/home/nix/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar:/home/nix/.m2/repository/com/microsoft/playwright/playwright/1.43.0/playwright-1.43.0.jar:/home/nix/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/home/nix/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/nix/.m2/repository/com/microsoft/playwright/driver/1.43.0/driver-1.43.0.jar:/home/nix/.m2/repository/com/microsoft/playwright/driver-bundle/1.43.0/driver-bundle-1.43.0.jar:/home/nix/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/home/nix/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/nix/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-suite/1.10.1/junit-platform-suite-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-suite-api/1.10.1/junit-platform-suite-api-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.10.1/junit-platform-suite-engine-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.10.1/junit-platform-suite-commons-1.10.1.jar:/home/nix/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.1/junit-platform-launcher-1.10.1.jar:/home/nix/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar:/home/nix/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.6/rxjava-3.1.6.jar:/home/nix/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/home/nix/.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar:/home/nix/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/home/nix/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/home/nix/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/nix"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/nix/Documents/playwright-test"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/home/nix/Documents/playwright-test/target/surefire/surefirebooter-20250530230209586_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.15+6-Ubuntu-0ubuntu124.04"/>
+    <property name="user.name" value="nix"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.11.0-26-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/nix/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-17"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="17.0.15"/>
+    <property name="user.dir" value="/home/nix/Documents/playwright-test"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="17.0.15+6-Ubuntu-0ubuntu124.04"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testCreateLoan" classname="com.playwrighttests.tests.api.RenewLoanTest" time="3.217">
+    <system-err><![CDATA[[main] INFO com.playwrighttests.tests.api.BaseApiTest - === API Test Global Setup Started ===
+[main] INFO com.playwrighttests.utils.ConfigManager - Configuration properties loaded successfully
+[main] INFO com.playwrighttests.utils.ExtentReportManager - ExtentReports initialized successfully. Report will be generated at: test-results/reports/ExtentReport_2025-05-30_23-02-10.html
+[main] INFO com.playwrighttests.tests.api.BaseApiTest - === API Test Global Setup Completed ===
+[main] INFO com.playwrighttests.tests.api.BaseApiTest - === API Test Setup Started: test-003-api-renew-loan ===
+[main] INFO com.playwrighttests.utils.ApiClient - API client initialized with base URL: https://0b93d062-55ba-4f24-9ea8-c409e94c7fc3.mock.pstmn.io
+[main] INFO com.playwrighttests.tests.api.BaseApiTest - === API Test Setup Completed: test-003-api-renew-loan ===
+[main] INFO com.playwrighttests.utils.Service - POST request to: /cart/transactions/renewloan
+[main] INFO com.playwrighttests.utils.ApiClient - Sending POST request to: /cart/transactions/renewloan
+[main] INFO com.playwrighttests.utils.ApiClient - Response status: 200 OK
+[main] INFO com.playwrighttests.utils.ApiClient - Response body (truncated): {
+    "success": true,
+    "messages": [
+        "Transaction(s) has been committed successfully"
+    ],
+    "payload": {
+        "clientTransactionId": null,
+        "totalAmount": 3012.76,
+        "currency": "USD",
+        "transactionEmail": "Varsha.Anand@ezcorp.com",
+        "customer": {
+            "customerEzId": "0063445049",
+            "email": "teranalondra187@gmail.com",
+            "firstName": "ALONDRA",
+            "lastName": "GARCIA",
+            "phone": "(667)694-1610",
+            "maternalLastName": "TERAN",
+            "customerType": "Individual",
+            "address": {
+                "addressLine1": "4838 ruben marquez",
+                "addressLine2": "LOPEZ MATEOS",
+                "city": "CULIACAN",
+                "addressState": "SI",
+                "country": "Mexico",
+                "postalCode": "80190",
+                "streetName": "ruben marquez",
+                "streetNo": null,
+                "aptSuite": "4838",
+                "stateCode":...
+[main] INFO com.playwrighttests.tests.api.RenewLoanTest - {
+    "success": true,
+    "messages": [
+        "Transaction(s) has been committed successfully"
+    ],
+    "payload": {
+        "clientTransactionId": null,
+        "totalAmount": 3012.76,
+        "currency": "USD",
+        "transactionEmail": "Varsha.Anand@ezcorp.com",
+        "customer": {
+            "customerEzId": "0063445049",
+            "email": "teranalondra187@gmail.com",
+            "firstName": "ALONDRA",
+            "lastName": "GARCIA",
+            "phone": "(667)694-1610",
+            "maternalLastName": "TERAN",
+            "customerType": "Individual",
+            "address": {
+                "addressLine1": "4838 ruben marquez",
+                "addressLine2": "LOPEZ MATEOS",
+                "city": "CULIACAN",
+                "addressState": "SI",
+                "country": "Mexico",
+                "postalCode": "80190",
+                "streetName": "ruben marquez",
+                "streetNo": null,
+                "aptSuite": "4838",
+                "stateCode": null,
+                "countryCode": null,
+                "addressStateDisplayText": "Sinaloa",
+                "zoneDisplayText": null,
+                "block": null,
+                "zone": null
+            },
+            "identifications": [
+                {
+                    "type": "CE - Carte Electoral",
+                    "value": "1181126863896",
+                    "isLastID": true
+                }
+            ],
+            "middleName": "TERESA",
+            "locationEzId": "85915",
+            "dateOfBirth": "2002-09-27",
+            "media": []
+        },
+        "cartContext": {
+            "ipAddress": "10.251.21.45",
+            "locationEzId": "85915",
+            "employeeEzId": "131313149",
+            "cashDrawer": null,
+            "cartEzId": "CIXZO-U19AJ",
+            "location": {
+                "ezId": "85915",
+                "name": "CLUTHIER",
+                "addressLine1": "#4038 Blvd. Manuel J Clouthier",
+                "addressLine2": "Col. Buenos Aires",
+                "city": "Culiacan",
+                "stateName": "Sinaloa",
+                "zipCode": "80199",
+                "countryName": "Mexico",
+                "phoneNumber": "(667)135-2010",
+                "openTime": "10:00",
+                "closeTime": "19:00",
+                "stateAlternateText": "SI",
+                "stateAlternateTextMX": "SI",
+                "storeHours": [
+                    {
+                        "dayOfWeek": "Monday through Friday",
+                        "openTime": "10:00",
+                        "closeTime": "19:00"
+                    },
+                    {
+                        "dayOfWeek": "Sunday",
+                        "openTime": "10:00",
+                        "closeTime": "16:00"
+                    },
+                    {
+                        "dayOfWeek": "Saturday",
+                        "openTime": "10:00",
+                        "closeTime": "18:00"
+                    }
+                ],
+                "receiptLocationName": "Bazareño",
+                "streetName": "Blvd. Manuel J Clouthier",
+                "streetNumber": "#4038",
+                "timezoneAlternateText": "America/Mexico_City",
+                "daylightSavingsTimeDisplayText": "No Adjustment",
+                "locale": "MX",
+                "countryCode": 128003
+            },
+            "transactionDttm": "2025-03-10T11:30:00+0000",
+            "transactionDttmLocation": "2025-03-10T05:30:00-0600",
+            "applicationName": "EZSYSTEMMS",
+            "transactionCustomer": null,
+            "manualOverride": {
+                "transactionDttm": "2025-03-10T11:30:00-0000",
+                "reasonCode": "TRANSACTION_FAILURE",
+                "manualImportEmployeeEzId": "131313180"
+            }
+        },
+        "transactions": [
+            {
+                "transactionType": "loan_renewal",
+                "transactionDetails": {
+                    "amount": 3000,
+                    "rewardCredit": null,
+                    "firearmDetails": null,
+                    "amlDataCaptured": null,
+                    "transactionDate": null,
+                    "signature": null,
+                    "customerImages": null,
+                    "renewal": {
+                        "lostTicketFee": 12.76,
+                        "updatedLoanAmount": 0,
+                        "itemUpdates": [
+                            {
+                                "itemEzId": "851330247165",
+                                "updatedPrincipal": 0
+                            }
+                        ],
+                        "approvalCode": "1234",
+                        "taxAmount": 413.79,
+                        "amountBeforeTax": 2586.21
+                    },
+                    "loan": {
+                        "ezId": "3053739",
+                        "customerEzId": "0063445049",
+                        "loanAmount": 270.7,
+                        "loanDate": "2025-05-29T06:41:17-0600",
+                        "dueDate": "2025-06-26",
+                        "finalDueDate": "2025-07-06",
+                        "paymentOptions": {
+                            "dailyExtension": {
+                                "amountRounded": 1.57,
+                                "amountUnrounded": 1.57006,
+                                "taxAmount": 0.22,
+                                "amountBeforeTax": 1.35,
+                                "maxExtensionDays": 27
+                            },
+                            "multiDayExtensions": null,
+                            "redemptions": {
+                                "amount": 314.66,
+                                "lostTicketFee": 12.76
+                            },
+                            "renewals": {
+                                "amount": 43.96,
+                                "lostTicketFee": 12.76
+                            },
+                            "paydowns": null
+                        },
+                        "financeDetails": {
+                            "financeCharge": 37.9,
+                            "apr": "182.5",
+                            "newMaturityDate": "2025-06-26",
+                            "amountDueAtMaturityDate": "308.60",
+                            "amountDueRedeemOnFinalDate": "308.6",
+                            "dailyFinanceCharge": 1.35
+                        },
+                        "location": {
+                            "ezId": "85915",
+                            "name": "CLUTHIER",
+                            "addressLine1": "#4038 Blvd. Manuel J Clouthier",
+                            "addressLine2": "Col. Buenos Aires",
+                            "city": "Culiacan",
+                            "stateName": "Sinaloa",
+                            "zipCode": "80199",
+                            "countryName": "Mexico",
+                            "phoneNumber": "(667)135-2010",
+                            "openTime": "10:00",
+                            "closeTime": "19:00",
+                            "stateAlternateText": "SI",
+                            "storeHours": [
+                                {
+                                    "dayOfWeek": "Monday through Friday",
+                                    "openTime": "10:00",
+                                    "closeTime": "19:00"
+                                },
+                                {
+                                    "dayOfWeek": "Saturday",
+                                    "openTime": "10:00",
+                                    "closeTime": "18:00"
+                                },
+                                {
+                                    "dayOfWeek": "Sunday",
+                                    "openTime": "10:00",
+                                    "closeTime": "16:00"
+                                }
+                            ],
+                            "receiptLocationName": "Bazareño",
+                            "streetName": "Blvd. Manuel J Clouthier",
+                            "streetNumber": "#4038",
+                            "timezoneAlternateText": "America/Mexico_City",
+                            "daylightSavingsTimeDisplayText": "No Adjustment",
+                            "locale": "MX",
+                            "countryCode": 128003
+                        },
+                        "items": [
+                            {
+                                "categoryName": "Lady's Ring - Anniversary",
+                                "description": "ANILLO DE 15 AÑOS 10 K PESO TOMADO 2 G",
+                                "cost": 1000,
+                                "ezId": "859150418769",
+                                "itemCategorization": 718001,
+                                "principal": 1000,
+                                "rootCategoryParent": {
+                                    "categoryId": 500002,
+                                    "categoryName": "Jewelry"
+                                },
+                                "status": 157012,
+                                "features": [
+                                    {
+                                        "attributeValue": "7",
+                                        "attributeKey": "Ring Size",
+                                        "attributeName": "Ring Size",
+                                        "objectId": 1007723158,
+                                        "featureType": "SL",
+                                        "featureSet": 517322266,
+                                        "elementId": null,
+                                        "listId": 498
+                                    }
+                                ],
+                                "goldColor": 701001,
+                                "goldColorDisplayText": "Yellow",
+                                "goldKarat": 703002,
+                                "goldKaratDisplayText": "10K (.417)",
+                                "gramWeight": 2,
+                                "metalTypeDisplayText": "Gold",
+                                "metalTypeCode": "GOLD",
+                                "stoneCount": 0,
+                                "stoneSet": 410140360,
+                                "stones": [],
+                                "additionalFeatures": [],
+                                "ownerAppliedMarks": "CHEQUEO DE KILATAJE",
+                                "highAppraisal": 1095,
+                                "lowAppraisal": 870,
+                                "itemLocation": 197530201,
+                                "itemLocationName": "Jewelry Safe",
+                                "jewelryGender": {
+                                    "displayText": "Woman's",
+                                    "alternateText": "W",
+                                    "displayTextMx": "Damas",
+                                    "alternateTextMx": "W"
+                                },
+                                "jewelryStyle": {
+                                    "displayText": "Other",
+                                    "alternateText": "X",
+                                    "displayTextMx": "Otro",
+                                    "alternateTextMx": "X"
+                                },
+                                "jewelryType": {
+                                    "displayText": "Ring",
+                                    "alternateText": "R",
+                                    "displayTextMx": "Anillo",
+                                    "alternateTextMx": "R"
+                                }
+                            }
+                        ],
+                        "loanEzId": "3052665",
+                        "loanLocationEzId": "85915",
+                        "financeChargePaidThrough": "2025-05-29",
+                        "totalFinanceChargePaid": 0,
+                        "apr": 1.8,
+                        "hasJewelry": "T",
+                        "ruleGroup": 389334,
+                        "interestCharge": 798,
+                        "storageCharge": 532,
+                        "setUpFee": 0,
+                        "policeCharge": 0,
+                        "firearmHandlingCharge": 0,
+                        "setUpRate": 0,
+                        "additionalCharge": 0,
+                        "hasPartialPayment": false,
+                        "partialPaymentTempRate": 0,
+                        "loanTerm": 28,
+                        "dailyInterestCharge": 0.76,
+                        "firstLoanEzId": "3046829",
+                        "loanRuleId": 3098920,
+                        "firstLoanDateMade": "2023-09-24",
+                        "serviceStorageCharge": 532,
+                        "interestRate": 8.4,
+                        "interestRate1": 8.4,
+                        "annualServiceStorageRate": 0,
+                        "originalEmployeeEzId": "43302405",
+                        "interestRate2": 8.4,
+                        "interestChargeD76": 425.59999999999997,
+                        "storageChargeD76": 283.73333333333335,
+                        "setUpRateChargeD76": 0,
+                        "setUpFeeD76": 0,
+                        "policeChargeD76": 0,
+                        "serviceFee2ChargeD76": 0,
+                        "dropDays": 10,
+                        "loanLostTicketFee": 11
+                    },
+                    "isMemberOfTheArmedForces": null,
+                    "isDependentOfTheArmedForces": null
+                }
+            }
+        ],
+        "tenderIn": [
+            {
+                "tenderType": "CS",
+                "tenderAmount": 3012.76
+            }
+        ],
+        "tenderOut": []
+    }
+}
+[main] INFO com.playwrighttests.tests.api.RenewLoanTest - Check For Field customerEzId
+[main] INFO com.playwrighttests.tests.api.RenewLoanTest - Check for LocationEzId Value
+[main] ERROR com.playwrighttests.tests.api.RenewLoanTest - locationEzId123 is missing or incorrect
+[main] INFO com.playwrighttests.tests.api.RenewLoanTest - stateAlternateTextMX is present and correct
+[main] INFO com.playwrighttests.tests.api.BaseApiTest - === API Test Teardown Started: test-003-api-renew-loan ===
+[main] INFO com.playwrighttests.tests.api.BaseApiTest - === API Test Teardown Completed: test-003-api-renew-loan ===
+]]></system-err>
+  </testcase>
+</testsuite>

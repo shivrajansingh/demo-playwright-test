@@ -14,9 +14,9 @@ import static org.junit.jupiter.api.Assertions.*;
 public class NewLoanTest extends BaseApiTest {
     private static final Logger log = LoggerFactory.getLogger(NewLoanTest.class);
     @Test
-    @DisplayName("test-003-api-create-loan")
+    @DisplayName("test-002-api-create-loan")
     void testCreateLoan() {
-        reportManager.addInfo("test-003-api-create-loan", "Creating a new loan");
+        reportManager.addInfo("test-002-api-create-loan", "Creating a new loan");
 
         // Create payload data
         String payloadData = """
@@ -188,7 +188,7 @@ public class NewLoanTest extends BaseApiTest {
         String actualCurrency = payload.get("currency").getAsString();
         assertEquals("USD", actualCurrency, "Currency should be USD");
         
-        reportManager.addSuccess("test-003-api-create-loan",
+        reportManager.addSuccess("test-002-api-create-loan",
                 "Successfully created loan with status " + response.status());
     }
 

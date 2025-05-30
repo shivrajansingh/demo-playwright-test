@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.playwrighttests.tests.api.ApiTestSuite
+-------------------------------------------------------------------------------
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.064 s -- in com.playwrighttests.tests.api.ApiTestSuite

@@ -1,11 +1,16 @@
 package com.playwrighttests.utils;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.microsoft.playwright.APIResponse;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.Assertions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -73,64 +78,26 @@ public class ResponseAssert {
      * @param fieldName the field name to check
      * @param expectedValue the expected field value
      */
-    public static void assertFieldEquals(APIResponse response, String fieldName, String expectedValue) {
-        String responseText = response.text();
-        
-        // Print a well-formatted version of the JSON response for debugging
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        JsonElement je = JsonParser.parseString(responseText);
-        String prettyJson = gson.toJson(je);
-        
-        log.info("Checking if response contains field '{}' with value '{}'", fieldName, expectedValue);
-        log.info("Response JSON structure:\n{}", prettyJson);
-        
+    public static boolean assertFieldEquals(String json, String fieldName, String valueName) {
         try {
-            // Create a simple JSON object from response text
-            JsonObject jsonObject = JsonParser.parseString(responseText).getAsJsonObject();
-            
-            // Find the field at the root or in the payload
-            boolean fieldFound = false;
-            String actualValue = null;
-            
-            // Check at root level
-            if (jsonObject.has(fieldName)) {
-                JsonElement element = jsonObject.get(fieldName);
-                if (element.isJsonPrimitive()) {
-                    actualValue = element.getAsString();
-                    log.info("Found field '{}' at root level with value: '{}'", fieldName, actualValue);
-                    fieldFound = expectedValue.equals(actualValue);
-                }
+            ObjectMapper mapper = new ObjectMapper();
+            JsonNode root = mapper.readTree(json);
+            JsonNode targetField = root.findValue(fieldName);
+            if (targetField == null) {
+                return false;
             }
-            
-            // Check in payload if exists and field not found at root
-            if (!fieldFound && jsonObject.has("payload")) {
-                JsonObject payload = jsonObject.getAsJsonObject("payload");
-                if (payload.has(fieldName)) {
-                    JsonElement element = payload.get(fieldName);
-                    if (element.isJsonPrimitive()) {
-                        actualValue = element.getAsString();
-                        log.info("Found field '{}' in payload with value: '{}'", fieldName, actualValue);
-                        fieldFound = expectedValue.equals(actualValue);
+            if (targetField.isArray()) {
+                for (JsonNode element : targetField) {
+                    if (element.asText().equals(valueName)) {
+                        return true;
                     }
                 }
+            } else if (targetField.isTextual() || targetField.isNumber() || targetField.isBoolean()) {
+                return targetField.asText().equals(valueName);
             }
-            
-            // If field was found but values don't match, report the actual value
-            if (actualValue != null && !fieldFound) {
-                Assertions.fail(String.format("Field '%s' found but value was '%s', expected '%s'", 
-                    fieldName, actualValue, expectedValue));
-            } else if (!fieldFound) {
-                // Field was not found at all
-                Assertions.fail(String.format("Field '%s' not found in response", fieldName));
-            } else {
-                // Assert that we found the field with the expected value
-                Assertions.assertTrue(fieldFound, 
-                    String.format("Expected response to contain field '%s' with value '%s'", fieldName, expectedValue));
-            }
+            return false;
         } catch (Exception e) {
-            log.error("Error parsing JSON response: {}", e.getMessage(), e);
-            Assertions.fail(String.format("Error checking field '%s' with value '%s': %s", 
-                fieldName, expectedValue, e.getMessage()));
+            return false;
         }
     }
 }

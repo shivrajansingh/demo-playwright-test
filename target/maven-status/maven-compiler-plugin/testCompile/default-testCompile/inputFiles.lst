@@ -5,3 +5,4 @@
 /home/nix/Documents/playwright-test/src/test/java/com/playwrighttests/tests/api/NewLoanTest.java
 /home/nix/Documents/playwright-test/src/test/java/com/playwrighttests/tests/BaseTest.java
 /home/nix/Documents/playwright-test/src/test/java/com/playwrighttests/tests/api/GetStoreTest.java
+/home/nix/Documents/playwright-test/src/test/java/com/playwrighttests/tests/api/RenewLoanTest.java
