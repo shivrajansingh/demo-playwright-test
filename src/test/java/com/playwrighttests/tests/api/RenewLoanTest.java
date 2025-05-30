@@ -11,19 +11,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.Assertions;
+
 public class RenewLoanTest extends BaseApiTest {
 
-    private void verifyJsonField(String json, String fieldName, String expectedValue) {
-    if (ResponseAssert.assertFieldEquals(json, fieldName, expectedValue)) {
-        log.info(fieldName + " is present and correct");
-        reportManager.addInfo("test-003-api-renew-loan", fieldName + " is present and correct");
-    } else {
-        log.error(fieldName + " is missing or incorrect");
-        reportManager.addError("test-003-api-renew-loan", fieldName + " is missing or incorrect");
-    }
-}
-
-
+   
     private static final Logger log = LoggerFactory.getLogger(RenewLoanTest.class);
     @Test
     @DisplayName("test-003-api-renew-loan")
@@ -107,9 +99,13 @@ public class RenewLoanTest extends BaseApiTest {
 
         log.info("Check for LocationEzId Value");
 
-       verifyJsonField(responseText, "locationEzId", "85915");
-       verifyJsonField(responseText, "stateAlternateTextMX", "SI");
-        
+       Assertions.assertTrue(ResponseAssert.assertFieldEquals(responseText, "locationEzId", "85915"), 
+                "Expected locationEzId to be 85915");
+
+
+        log.info("Check for StateAlternateTextMX Value");
+       Assertions.assertTrue(ResponseAssert.assertFieldEquals(responseText, "stateAlternateTextMX", "SI"));
+
         reportManager.addSuccess("test-002-api-create-loan",
                 "Successfully created loan with status " + response.status());
     }
