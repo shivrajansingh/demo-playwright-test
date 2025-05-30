@@ -1,2 +1,7 @@
 /home/nix/Documents/playwright-test/src/test/java/com/playwrighttests/tests/YoutubeTest.java
+/home/nix/Documents/playwright-test/src/test/java/com/playwrighttests/tests/api/BaseApiTest.java
+/home/nix/Documents/playwright-test/src/test/java/com/playwrighttests/tests/api/ApiTestSuite.java
+/home/nix/Documents/playwright-test/src/test/java/com/playwrighttests/utils/ResponseAssert.java
+/home/nix/Documents/playwright-test/src/test/java/com/playwrighttests/tests/api/NewLoanTest.java
 /home/nix/Documents/playwright-test/src/test/java/com/playwrighttests/tests/BaseTest.java
+/home/nix/Documents/playwright-test/src/test/java/com/playwrighttests/tests/api/GetStoreTest.java

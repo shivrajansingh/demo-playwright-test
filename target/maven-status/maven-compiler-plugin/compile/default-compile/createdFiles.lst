@@ -1,4 +1,8 @@
 com/playwrighttests/pages/BasePage.class
+com/playwrighttests/utils/JsonUtils.class
+com/playwrighttests/utils/ExtentReportManager.class
+com/playwrighttests/utils/ApiClient.class
 com/playwrighttests/utils/ConfigManager.class
+com/playwrighttests/utils/Service.class
 com/playwrighttests/utils/ScreenshotUtils.class
 com/playwrighttests/pages/YoutubePage.class
