@@ -1,7 +1,6 @@
 package com.playwrighttests.tests.api;
 
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+
 import com.microsoft.playwright.APIResponse;
 import com.playwrighttests.utils.ResponseAssert;
 
